@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#80E0F7FA"
+    tools:context=".ProjectActivity">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:background="#F1F8E9"
+        android:text="Classification of Alzheimer"
+        android:textAlignment="center"
+        android:textSize="30dp" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_below="@+id/title"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp" />
+
+    <Button
+        android:id="@+id/selectBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView"
+        android:layout_marginLeft="45dp"
+        android:layout_marginTop="20dp"
+        android:text="Select Image" />
+
+    <Button
+        android:id="@+id/captureBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="20dp"
+        android:layout_toRightOf="@id/selectBtn"
+        android:text="Capture Image" />
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/selectBtn"
+        android:layout_marginTop="20dp"
+        android:text="Select a CNN model"
+        android:textAlignment="center"
+        android:textSize="25dp" />
+
+    <TextView
+        android:id="@+id/textResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/result"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:text="Next prediction will use:"
+        android:textAlignment="center"
+        android:textSize="25dp" />
+
+    <ToggleButton
+        android:id="@+id/toggleButton"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/result"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="16dp"
+        android:layout_toRightOf="@+id/textResult"
+        android:backgroundTint="#C5E1A5"
+        android:buttonTint="#C5E1A5"
+        android:text="ToggleButton"
+        android:textAllCaps="false"
+        android:textOff="ResNet50"
+        android:textOn="InceptionV3" />
+
+    <TextView
+        android:id="@+id/textConfidence"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textResult"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="Confidence of prediction:"
+        android:textAlignment="center"
+        android:textSize="25dp" />
+
+    <TextView
+        android:id="@+id/confidence"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textConfidence"
+        android:layout_marginTop="20dp"
+        android:text="---%"
+        android:textAlignment="center"
+        android:textSize="25dp" />
+
+    <Button
+        android:id="@+id/restartBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/confidence"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        android:text="Back" />
+
+    <Button
+        android:id="@+id/help"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/confidence"
+        android:layout_marginLeft="180dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_toRightOf="@id/restartBtn"
+        android:foreground="@mipmap/question_round"
+        android:onClick="ShowPopup" />
+
+</RelativeLayout>

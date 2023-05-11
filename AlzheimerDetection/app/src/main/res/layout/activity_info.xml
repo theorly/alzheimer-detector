@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".InfoActivity">
+
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:background="#F1F8E9"
+        android:text="Informazioni &amp; contatti"
+        android:textAlignment="center"
+        android:textSize="30dp" />
+
+    <TextView
+        android:id="@+id/text1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/title"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:background="#E0F7FA"
+        android:text="Link alla documentazione \n di progetto e ai contatti"
+        android:textAlignment="center"
+        android:textSize="25dp" />
+
+    <ImageView
+        android:id="@+id/imageLogo"
+        android:layout_width="300dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/whatsappButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="70dp"
+        android:scaleX="2"
+        android:scaleY="2"
+        android:textAlignment="center"
+        android:textSize="25dp"
+        app:srcCompat="@mipmap/ic_launcher"
+        tools:srcCompat="@mipmap/ic_launcher" />
+
+    <TextView
+        android:id="@+id/textPier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageLogo"
+        android:layout_marginTop="40dp"
+        android:layout_centerHorizontal="true"
+        android:text="\@piercarrozzini"
+        android:textAlignment="center"
+        android:textSize="25dp" />
+    <TextView
+        android:id="@+id/textOrl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textPier"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:text="\@theorly"
+        android:textAlignment="center"
+        android:textSize="25dp" />
+
+    <Button
+        android:id="@+id/returnBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textOrl"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="60dp"
+        android:text="Back" />
+
+    <ImageButton
+        android:id="@+id/whatsappButton"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_below="@+id/text1"
+        android:backgroundTint="@color/white"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="60dp"
+        app:srcCompat="@mipmap/whatsapp_foreground" />
+
+    <ImageButton
+        android:id="@+id/telegramButton"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_below="@+id/text1"
+        android:backgroundTint="@color/white"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="60dp"
+        android:layout_toRightOf="@id/whatsappButton"
+        app:srcCompat="@mipmap/telegram_foreground"
+        tools:srcCompat="@mipmap/telegram_foreground" />
+
+    <ImageButton
+        android:id="@+id/gitButton"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_below="@+id/text1"
+        android:backgroundTint="@color/white"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="60dp"
+        android:layout_toRightOf="@id/telegramButton"
+        app:srcCompat="@mipmap/git_foreground"
+        tools:srcCompat="@mipmap/git_foreground" />
+
+</RelativeLayout>
